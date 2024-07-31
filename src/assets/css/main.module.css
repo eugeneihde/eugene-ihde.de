@@ -1,0 +1,339 @@
+@font-face {
+  font-family: varela-round-regular;
+  src: url('/VarelaRound-Regular.ttf');
+}
+
+/* General */
+.root__container {
+  margin: 8rem 0;
+  padding: 16px;
+}
+
+.content__container {
+  width: 100%;
+}
+
+.header_center__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__icon {
+  font-size: 1rem !important;
+  margin: -0.15rem 0 0 0.5rem;
+}
+
+/* Components */
+  /* Navbar */
+  .navbar__appbar {
+    padding: 0 5rem;
+    box-shadow: none !important;
+    height: 7rem;
+    background-color: #1b1b1f !important;
+    border-bottom: 1px solid #242429;
+  }
+
+  .navbar__toolbar {
+    justify-content: center;
+    height: inherit;
+  }
+
+  .navbar_button__container {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .navbar__button {
+    font-weight: bold !important;
+  }
+
+  .navbar_active__button {
+    color: #fff !important;
+    background-color: #242429 !important;
+  }
+
+  /* Footer */
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0 !important;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #1b1b1f;
+    border-top: 1px solid #242429;
+  }
+
+  .footer_copyright__typography {
+    color: #969696;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs_breadcrumbs {
+    margin-bottom: 2rem !important;
+  }
+
+  .breadcrumbs__link {
+    font-size: 18px !important;
+  }
+
+/* Home Page */
+.homepage__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage_image__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage__image {
+  width: 60%;
+  border-radius: 250px;
+}
+
+.homepage_content__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homepage_content_header__typography {
+  font-size: 3rem !important;
+}
+
+.homepage_content_typewriter__typography {
+  margin-top: 32px !important;
+}
+
+/* Experience Page */
+.experience_project__container {
+  width: 40rem;
+  background-color: #242429;
+  margin: 2.5rem auto;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+.experience_project__container:hover {
+  scale: 1.05;
+}
+
+.experience_project_header__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.experience_project_title__typography {
+  font-size: 1.25rem !important;
+  margin-right: 1rem;
+}
+
+.experience_project_duration__typography {
+  color: #818191;
+  font-weight: bold !important;
+}
+
+.experience_project_technology__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Technology Components */
+.technology__container {
+  padding-right: 16px;
+  border-radius: 15px;
+  display: flex;
+}
+
+.technology__icon {
+  scale: 0.7;
+}
+
+.technology__typography {
+  font-weight: bold !important;
+  color: #b6b6cf;
+}
+
+/* Experience Detail Page */
+.experience_detail__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.experience_detail__container > h2 {
+  text-align: center;
+}
+
+.experience_detail__image {
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+
+.experience_detail_duration__typography {
+  color: #818191;
+  font-weight: bold !important;
+  margin-top: 0.5rem !important;
+}
+
+.experience_detail_technologies__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 1rem 0;
+}
+
+.experience_detail_description__container {
+  margin-top: 4rem;
+  text-align: center;
+  width: 45rem;
+}
+
+/* Project Detail Page */
+.project_title__typography {
+  font-size: 2.25rem !important;
+  text-align: center;
+  margin: 2rem 0 2rem 0 !important;
+}
+
+.project_description__container {
+  width: 45rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.project_company_description__typography {
+  font-size: 1.15rem !important;
+  line-height: 2.25rem !important;
+}
+
+.project_sourcecode__button {
+  transition: 0.3s !important;
+  border-radius: 15px !important;
+  border: 2px solid gray !important;
+  font-weight: bold !important;
+}
+
+.project_sourcecode__button:hover {
+  scale: 1.1;
+}
+
+/* Imprint */
+.imprint__content__container {
+  margin-top: 3rem;
+}
+
+.imprint__container {
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.imprint__content__container > p {
+  color: #969696;
+}
+
+/* Not Found Page */
+.notfound__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notfound__svg {
+  width: 40%;
+  margin: 4rem 0;
+}
+
+/* Media Querys */
+@media (max-width: 900px) {
+  .homepage__container {
+    flex-direction: column;
+  }
+
+  .homepage_image__container {
+    width: 50%;
+  }
+
+  .homepage_content_header__typography {
+    font-size: 2rem !important;
+  }
+
+  .homepage_content__container {
+    margin-top: 4rem;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .project_description__container {
+    width: 100%;
+  }
+
+  .experience_detail_description__container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 690px) {
+  .experience_project__container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .imprint__container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .homepage_image__container {
+    width: 80%;
+    margin-top: -2rem;
+  }
+
+  .homepage_content_header__typography {
+    font-size: 1.5rem !important;
+  }
+  
+  .homepage_content__container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .project_title__typography {
+    font-size: 1.75rem !important;
+  }
+
+  .footer__container {
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .experience_detail__image {
+    width: 100%;
+  }
+}
