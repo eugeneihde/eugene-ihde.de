@@ -79,6 +79,17 @@
 
   .breadcrumbs__link {
     font-size: 18px !important;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .breadcrumbs__link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumbs__typography {
+    font-size: 18px !important;
+    color: #969696;
   }
 
 /* Home Page */
