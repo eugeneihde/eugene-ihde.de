@@ -6,7 +6,7 @@
 /* General */
 .root__container {
   margin: 8rem 0;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .content__container {
@@ -78,7 +78,7 @@
   }
 
   .breadcrumbs__link {
-    font-size: 18px !important;
+    font-size: 1.25 !important;
     text-decoration: none;
     color: inherit;
   }
@@ -88,7 +88,7 @@
   }
 
   .breadcrumbs__typography {
-    font-size: 18px !important;
+    font-size: 1.25 !important;
     color: #969696;
   }
 
@@ -123,7 +123,7 @@
 }
 
 .homepage_content_typewriter__typography {
-  margin-top: 32px !important;
+  margin-top: 2rem !important;
 }
 
 /* Experience Page */
@@ -159,13 +159,13 @@
 .experience_project_technology__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Technology Components */
 .technology__container {
-  padding-right: 16px;
+  padding-right: 1rem;
   border-radius: 15px;
   display: flex;
 }
@@ -326,6 +326,10 @@
   }
 
   .homepage_content_header__typography {
+    font-size: 1.5rem !important;
+  }
+
+  .homepage_content_typewriter__typography {
     font-size: 1.5rem !important;
   }
   

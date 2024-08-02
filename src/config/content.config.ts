@@ -84,7 +84,7 @@ export const workExperiencesDetailView = {
     jobTitle: 'Company Owner',
     jobDuration: 'MAR 2024 ➔ PRESENT',
     logo: ihdewebservicesLogo,
-    description: 'In addition to my regular work, I started building my own business. At the moment the company offers the services of Website-Design & -Development and Website- & Content-Maintenance.',
+    description: 'In addition to my regular work, I started building my own business, offering Website-Design & -Development and Social Media Marketing Services.',
     technologies: [
       {
         type: 'ReactJs',
@@ -110,7 +110,7 @@ export const workExperiencesDetailView = {
     jobTitle: 'Junior Form Developer',
     jobDuration: 'AUG 2023 ➔ PRESENT',
     logo: publicplanLogo,
-    description: 'My main tasks where the development of forms with the Open-Source form builder Form.io and later, the creation of workflows with Camunda BPM.\n\nI also was involved in the Development of several Frontend-Applications with ReactJs and also a Data-Synchronization-Application based on Python.',
+    description: 'My main tasks where the development of forms with the Open-Source form builder Form.io and later, the creation of workflows with Camunda BPM.\n\nI also was involved in the Development of several Frontend-Applications with ReactJs and a Data-Synchronization-Application based on Python.',
     technologies: [
       {
         type: 'ReactJs',
