@@ -209,14 +209,13 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 4rem;
+  margin: 3rem 0;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding: 1rem 0;
 }
 
 .experience_detail_description__container {
-  margin-top: 4rem;
   text-align: center;
   width: 45rem;
 }
@@ -225,12 +224,19 @@
 .project_title__typography {
   font-size: 2.25rem !important;
   text-align: center;
-  margin: 2rem 0 2rem 0 !important;
+  margin: 2rem 0 0 0 !important;
+}
+
+.project_release__typography {
+  color: #818191;
+  font-weight: bold !important;
+  margin-top: 0.5rem !important;
+  font-size: 1.15rem !important;
 }
 
 .project_description__container {
   width: 45rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -244,6 +250,7 @@
   border-radius: 15px !important;
   border: 2px solid gray !important;
   font-weight: bold !important;
+  margin-top: -0.5rem !important;
 }
 
 .project_sourcecode__button:hover {

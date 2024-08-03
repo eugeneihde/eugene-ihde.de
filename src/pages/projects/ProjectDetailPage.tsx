@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 
 import styles from '../../assets/css/main.module.css'
 import { projectDetailData } from '../../config/content.config'
@@ -47,6 +48,24 @@ const ProjectDetailPage = () => {
             >
               {projectDetailData[project].title}
             </Typography>
+            <Typography className={styles.project_release__typography}>
+              RELEASE: {projectDetailData[project].releaseDate}
+            </Typography>
+            <Box className={styles.experience_detail_technologies__container}>
+              {projectDetailData[project].technologies.map((item, index) => (
+                <Box
+                  key={index}
+                  sx={{ border: `2px solid ${item.color}` }}
+                  className={styles.technology__container}
+                >
+                  <FiberManualRecordIcon
+                    sx={{ color: item.color }}
+                    className={styles.technology__icon}
+                  />
+                  <Typography className={styles.technology__typography}>{item.type}</Typography>
+                </Box>
+              ))}
+            </Box>
             <Link
               to={projectDetailData[project].sourceCode}
               target='_blank'
