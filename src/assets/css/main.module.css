@@ -108,7 +108,7 @@
 
 .homepage__image {
   width: 60%;
-  border-radius: 250px;
+  border-radius: 0 0 50px 50px;
 }
 
 .homepage_content__container {
