@@ -26,10 +26,14 @@ const HomePage = () => {
         <Box className={styles.homepage_content__container}>
           <Typography
             variant='h1'
-            className={styles.homepage_content_header__typography}
+            className={styles.homepage_content_header_name__typography}
           >
             Eugene Ihde
-            <br />
+          </Typography>
+          <Typography
+            variant='h1'
+            className={styles.homepage_content_header__typography}
+          >
             Frontend & Backend Web Developer
           </Typography>
           <Typography
@@ -44,7 +48,7 @@ const HomePage = () => {
                 typewriter
                   .changeDelay(50)
                   .changeDeleteSpeed(30)
-                  .typeString('I work(ed) with TypeScript / JavaScript')
+                  .typeString('I work with TypeScript / JavaScript')
                   .pauseFor(1500)
                   .deleteChars(23)
                   .typeString('PHP')

@@ -118,6 +118,11 @@
   justify-content: center;
 }
 
+.homepage_content_header_name__typography {
+  font-size: 3rem !important;
+  margin-bottom: 1rem !important;
+}
+
 .homepage_content_header__typography {
   font-size: 3rem !important;
 }
@@ -327,6 +332,10 @@
 }
 
 @media (max-width: 550px) {
+  .navbar__appbar {
+    height: 5rem !important;
+  }
+
   .homepage_image__container {
     width: 80%;
     margin-top: -2rem;
