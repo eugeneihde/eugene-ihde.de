@@ -100,6 +100,29 @@
   margin-top: 5rem;
 }
 
+.homepage_social__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.homepage_social_links__container {
+  display: flex;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.social__icon {
+  color: white;
+  font-size: 2rem !important;
+  transition: 0.3s !important;
+}
+
+.social__icon:hover {
+  scale: 1.25;
+}
+
 .homepage_image__container {
   width: 100%;
   display: flex;

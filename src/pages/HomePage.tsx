@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
 import { Box, Typography } from '@mui/material'
 import Typewriter from 'typewriter-effect'
 import { Helmet } from "react-helmet"
 
 import styles from '../assets/css/main.module.css'
 import profilePicture from '../assets/media/profilepicture.png'
+import { socialLinks } from '../config/content.config'
 
 const HomePage = () => {
   return (
@@ -66,6 +68,19 @@ const HomePage = () => {
               }}
             />
           </Typography>
+        </Box>
+      </Box>
+      <Box className={styles.homepage_social__container}>
+        <Box className={styles.homepage_social_links__container}>
+          {socialLinks.map((item, index) => (
+            <Link
+              key={index}
+              target='_blank'
+              to={item.link}
+            >
+              {item.icon}
+            </Link>
+          ))}
         </Box>
       </Box>
     </>

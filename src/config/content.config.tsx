@@ -1,6 +1,10 @@
 import ihdewebservicesLogo from '../assets/media/experiences/iw_logo_short_darkmode.svg'
 import publicplanLogo from '../assets/media/experiences/publicplan.svg'
 import brandungLogo from '../assets/media/experiences/brandung.png'
+import styles from '../assets/css/main.module.css'
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
 export interface BreadcrumbProps {
   breadcrumbs: LinkProps[]
@@ -10,6 +14,17 @@ interface LinkProps {
   label: string
   link?: string
 }
+
+export const socialLinks = [
+  {
+    icon: <LinkedInIcon className={styles.social__icon} />,
+    link: 'https://www.linkedin.com/in/ihde'
+  },
+  {
+    icon: <GitHubIcon className={styles.social__icon} />,
+    link: 'https://www.github.com/eugeneihde'
+  }
+]
 
 export const workExperiences = [
   {
