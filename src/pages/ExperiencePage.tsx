@@ -33,7 +33,7 @@ const ExperiencePage = () => {
                   variant='h2'
                   className={styles.experience_project_title__typography}
                 >
-                  {experience.jobTitle}・{experience.company}
+                  {experience.jobTitle}・<Box component='span' className={styles.experience_project_title_company__typography}>{experience.company}</Box>
                 </Typography>
                 <EastIcon />
               </Box>

@@ -12,7 +12,7 @@ const HomePage = () => {
     <>
       <Helmet>
         <title>Eugene Ihde - Private Portfolio</title>
-        <meta name='description' content='Private Portfolio of Eugene Ihde - Frontend & Backend Web Developer' />
+        <meta name='description' content='Private Portfolio of Eugene Ihde - Business Continuity Manager & Software Developer' />
       </Helmet>
       <Box className={styles.homepage__container}>
         <Box className={styles.homepage_image__container}>
@@ -36,7 +36,7 @@ const HomePage = () => {
             variant='h1'
             className={styles.homepage_content_header__typography}
           >
-            Frontend & Backend Web Developer
+            Business Continuity Manager & Software Developer
           </Typography>
           <Typography
             variant='h3'
@@ -56,10 +56,10 @@ const HomePage = () => {
                   .typeString('PHP')
                   .pauseFor(1500)
                   .deleteChars(3)
-                  .typeString('ReactJs')
+                  .typeString('React.js')
                   .pauseFor(1500)
                   .deleteChars(7)
-                  .typeString('NextJs')
+                  .typeString('Next.js')
                   .pauseFor(1500)
                   .deleteChars(6)
                   .typeString('TYPO3')

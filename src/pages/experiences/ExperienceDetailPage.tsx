@@ -1,30 +1,24 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { Link, useLocation } from 'react-router-dom'
 import { Box, Typography } from '@mui/material'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 
 import styles from '../../assets/css/main.module.css'
 import CustomBreadcrumbs from '../../components/CustomBreadcrumbs'
-import { workExperiencesDetailView } from '../../config/content.config'
-import { Helmet } from 'react-helmet'
+import { Companies, companies, workExperiencesDetailView } from '../../config/content.config'
+
 
 const ExperienceDetailPage = () => {
   const location = useLocation()
-  const [company, setCompany] = useState<'ihdewebservices' | 'publicplan' | 'brandung' | undefined>(undefined)
+  const [company, setCompany] = useState<Companies | undefined>(undefined)
 
   useEffect(() => {
     const pathSegments = location.pathname.split('/')
     const companyParam = pathSegments[2]
 
-    if (
-      typeof companyParam !== 'undefined' &&
-      (
-        companyParam === 'ihdewebservices' ||
-        companyParam === 'publicplan' ||
-        companyParam === 'brandung'
-      )
-    ) {
-      setCompany(companyParam)
+    if (typeof companyParam !== 'undefined' && companies.includes(companyParam)) {
+      setCompany(companyParam as Companies)
     } else {
       window.location.href = '/experience'
     }

@@ -10,6 +10,8 @@ export interface BreadcrumbProps {
   breadcrumbs: LinkProps[]
 }
 
+export type Companies = 'computerzentrumstrausberg' | 'ihdewebservices' | 'publicplan' | 'brandung'
+
 interface LinkProps {
   label: string
   link?: string
@@ -26,12 +28,34 @@ export const socialLinks = [
   }
 ]
 
+export const companies: string[] = ['computerzentrumstrausberg', 'ihdewebservices', 'publicplan', 'brandung']
+
 export const workExperiences = [
+  {
+    jobTitle: 'Business Continuity Manager & Software Developer',
+    company: 'Computer Zentrum Strausberg GmbH',
+    companyRef: 'computerzentrumstrausberg',
+    jobDuration: 'DEC 2024 ➔ PRESENT',
+    technologies: [
+      {
+        type: 'ISO 22301',
+        color: '#545454'
+      },
+      {
+        type: 'Angular',
+        color: '#a6120d'
+      },
+      {
+        type: 'TypeScript',
+        color: '#004eb5'
+      }
+    ]
+  },
   {
     jobTitle: 'Company Owner',
     company: 'Eugene Ihde Webservices',
     companyRef: 'ihdewebservices',
-    jobDuration: 'MAR 2024 ➔ PRESENT',
+    jobDuration: 'MAR 2024 ➔ OCT 2024',
     technologies: [
       {
         type: 'ReactJs',
@@ -55,7 +79,7 @@ export const workExperiences = [
     jobTitle: 'Junior Form Developer',
     company: 'Publicplan GmbH',
     companyRef: 'publicplan',
-    jobDuration: 'AUG 2023 ➔ PRESENT',
+    jobDuration: 'AUG 2023 ➔ AUG 2024',
     technologies: [
       {
         type: 'ReactJs',
@@ -94,6 +118,28 @@ export const workExperiences = [
 ]
 
 export const workExperiencesDetailView = {
+  computerzentrumstrausberg: {
+    company: 'Computer Zentrum Strausberg GmbH',
+    jobTitle: 'Business Continuity Manager & Software Developer',
+    jobDuration: 'DEC 2024 ➔ PRESENT',
+    logo: ihdewebservicesLogo,
+    description: '',
+    technologies: [
+      {
+        type: 'ISO 22301',
+        color: '#545454'
+      },
+      {
+        type: 'Angular',
+        color: '#a6120d'
+      },
+      {
+        type: 'TypeScript',
+        color: '#004eb5'
+      }
+    ],
+    companyLink: 'https://www.computerzentrum.de'
+  },
   ihdewebservices: {
     company: 'Ihde Webservices',
     jobTitle: 'Company Owner',
