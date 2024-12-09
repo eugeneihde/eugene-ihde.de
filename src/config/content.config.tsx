@@ -1,3 +1,4 @@
+import computerzentrumstrausbergLogo from '../assets/media/experiences/czs_logo.svg'
 import ihdewebservicesLogo from '../assets/media/experiences/iw_logo_short_darkmode.svg'
 import publicplanLogo from '../assets/media/experiences/publicplan.svg'
 import brandungLogo from '../assets/media/experiences/brandung.png'
@@ -122,8 +123,8 @@ export const workExperiencesDetailView = {
     company: 'Computer Zentrum Strausberg GmbH',
     jobTitle: 'Business Continuity Manager & Software Developer',
     jobDuration: 'DEC 2024 ➔ PRESENT',
-    logo: ihdewebservicesLogo,
-    description: '',
+    logo: computerzentrumstrausbergLogo,
+    description: 'In my role as a Business Continuity Manager and Software Developer, I am responsible for designing and implementing business continuity strategies to ensure organizational resilience in the face of disruptions. \n\nAdditionally, I contribute to the development of complex web applications based on Angular.',
     technologies: [
       {
         type: 'ISO 22301',
@@ -143,7 +144,7 @@ export const workExperiencesDetailView = {
   ihdewebservices: {
     company: 'Ihde Webservices',
     jobTitle: 'Company Owner',
-    jobDuration: 'MAR 2024 ➔ PRESENT',
+    jobDuration: 'MAR 2024 ➔ OCT 2024',
     logo: ihdewebservicesLogo,
     description: 'In addition to my regular work, I started building my own business, offering Website-Design & -Development and Social Media Marketing Services.',
     technologies: [
@@ -169,7 +170,7 @@ export const workExperiencesDetailView = {
   publicplan: {
     company: 'Publicplan',
     jobTitle: 'Junior Form Developer',
-    jobDuration: 'AUG 2023 ➔ PRESENT',
+    jobDuration: 'AUG 2023 ➔ AUG 2024',
     logo: publicplanLogo,
     description: 'My main tasks where the development of forms with the Open-Source form builder Form.io and later, the creation of workflows with Camunda BPM.\n\nI also was involved in the Development of several Frontend-Applications with ReactJs and a Data-Synchronization-Application based on Python.',
     technologies: [
@@ -193,7 +194,7 @@ export const workExperiencesDetailView = {
     jobTitle: 'Backend Development Trainee',
     jobDuration: 'AUG 2020 ➔ JULY 2023',
     logo: brandungLogo,
-    description: 'During this period, I successfully completed an IHK apprenticeship as an IT specialist for application development. \nIn addition to vocational school, I was involved in various customer projects based on the TYPO3 content management system. \nMy main activities were the further development of TYPO3 Extbase Extensions, adjustments in the TYPO3 backend (content maintenance, test case maintenance, etc.), creating and optimizing technical and administrative instructions for customers and/or colleagues and the administration of customer servers.',
+    description: 'During this period, I successfully completed an IHK apprenticeship as an IT specialist for application development. \n\nIn addition to vocational school, I was involved in various customer projects based on the TYPO3 content management system. \n\nMy main activities were the further development of TYPO3 Extbase Extensions, adjustments in the TYPO3 backend (content maintenance, test case maintenance, etc.), creating and optimizing technical and administrative instructions for customers and/or colleagues and the administration of customer servers.',
     technologies: [
       {
         type: 'PHP',

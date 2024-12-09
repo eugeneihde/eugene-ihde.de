@@ -132,7 +132,7 @@
 
 .homepage__image {
   width: 60%;
-  border-radius: 0 0 50px 50px;
+  border-radius: 500px;
 }
 
 .homepage_content__container {
@@ -284,7 +284,7 @@
 
 .project_sourcecode__button {
   transition: 0.3s !important;
-  border-radius: 15px !important;
+  border-radius: 25px !important;
   border: 2px solid gray !important;
   font-weight: bold !important;
   margin-top: -0.5rem !important;
