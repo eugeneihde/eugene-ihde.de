@@ -18,7 +18,7 @@ const ProjectsPage = () => {
         <Typography variant='h1'>Projects</Typography>
       </Box>
       <Box className={styles.content__container}>
-        {projectData.map((project, index) => (
+        {Object.values(projectData).map((project, index) => (
           <Link
             key={index}
             to={`/projects/${project.projectRef}`}

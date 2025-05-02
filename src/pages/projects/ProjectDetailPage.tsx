@@ -5,7 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 
 import styles from '../../assets/css/main.module.css'
-import { projectDetailData } from '../../config/content.config'
+import { projectData } from '../../config/content.config'
 import CustomBreadcrumbs from '../../components/CustomBreadcrumbs'
 import { Helmet } from 'react-helmet'
 
@@ -27,32 +27,32 @@ const ProjectDetailPage = () => {
     } else {
       window.location.href = '/projects'
     }
-  }, [location])
+  }, [])
 
   return (
     <>
       {project !== undefined &&
         <>
           <Helmet>
-            <title>Eugene Ihde - {projectDetailData[project].title}</title>
-            <meta name='description' content={`${projectDetailData[project].title}・${projectDetailData[project].description.substring(0, 100)}`} />
+            <title>Eugene Ihde - {projectData[project].title}</title>
+            <meta name='description' content={`${projectData[project].title}・${projectData[project].description.substring(0, 100)}`} />
           </Helmet>
           <CustomBreadcrumbs breadcrumbs={[
               { label: 'Projects', link: '/projects' },
-              { label: projectDetailData[project].title}
+              { label: projectData[project].title}
           ]} />
           <Box className={styles.header_center__container}>
             <Typography
               variant='h1'
               className={styles.project_title__typography}
             >
-              {projectDetailData[project].title}
+              {projectData[project].title}
             </Typography>
             <Typography className={styles.project_release__typography}>
-              RELEASE: {projectDetailData[project].releaseDate}
+              RELEASE: {projectData[project].releaseDate}
             </Typography>
             <Box className={styles.experience_detail_technologies__container}>
-              {projectDetailData[project].technologies.map((item, index) => (
+              {projectData[project].technologies.map((item, index) => (
                 <Box
                   key={index}
                   sx={{ border: `2px solid ${item.color}` }}
@@ -67,7 +67,7 @@ const ProjectDetailPage = () => {
               ))}
             </Box>
             <Link
-              to={projectDetailData[project].sourceCode}
+              to={projectData[project].sourceCode}
               target='_blank'
             >
               <Button
@@ -80,7 +80,7 @@ const ProjectDetailPage = () => {
             </Link>
             <Box className={styles.project_description__container}>
               <Typography className={styles.project_company_description__typography}>
-                {projectDetailData[project].description.split('\n').map((line, index) => (
+                {projectData[project].description.split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}<br />
                   </React.Fragment>

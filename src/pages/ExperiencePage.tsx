@@ -12,13 +12,13 @@ const ExperiencePage = () => {
     <>
       <Helmet>
         <title>Eugene Ihde - Experience</title>
-        <meta name='description' content='My Work Experience - Ihde Webservices ・ Publicplan GmbH ・ Brandung GmbH' />
+        <meta name='description' content='My Work Experience - Computerzentrum Strausberg ・ QTech ・ Publicplan ・ Brandung' />
       </Helmet>
       <Box className={styles.header_center__container}>
         <Typography variant='h1'>Work Experience</Typography>
       </Box>
       <Box className={styles.content__container}>
-        {workExperiences.map((experience, index) => (
+        {Object.values(workExperiences).map((experience, index) => (
           <Link
             key={index}
             to={`/experience/${experience.companyRef}`}

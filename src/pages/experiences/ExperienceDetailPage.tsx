@@ -6,7 +6,7 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 
 import styles from '../../assets/css/main.module.css'
 import CustomBreadcrumbs from '../../components/CustomBreadcrumbs'
-import { Companies, companies, workExperiencesDetailView } from '../../config/content.config'
+import { Companies, companies, workExperiences } from '../../config/content.config'
 
 
 const ExperienceDetailPage = () => {
@@ -29,33 +29,33 @@ const ExperienceDetailPage = () => {
       {company !== undefined &&
         <>
           <Helmet>
-            <title>Eugene Ihde - {workExperiencesDetailView[company].company}</title>
-            <meta name='description' content={`${workExperiencesDetailView[company].company}・${workExperiencesDetailView[company].description.substring(0, 100)}`} />
+            <title>Eugene Ihde - {workExperiences[company].company}</title>
+            <meta name='description' content={`${workExperiences[company].company}・${workExperiences[company].description.substring(0, 100)}`} />
           </Helmet>
           <CustomBreadcrumbs breadcrumbs={[
               { label: 'Experience', link: '/experience' },
-              { label: workExperiencesDetailView[company].company}
+              { label: workExperiences[company].company}
           ]} />
           <Box className={styles.experience_detail__container}>
             <Link
-              to={workExperiencesDetailView[company].companyLink}
+              to={workExperiences[company].companyLink}
               target='_blank'
             >
                 <Box
                   className={styles.experience_detail__image}
                   component='img'
-                  src={workExperiencesDetailView[company].logo}
+                  src={workExperiences[company].logo || ''}
                   alt='Company Logo'
                   title='Company Logo'
                   loading='eager'
                 />
             </Link>
-            <Typography variant='h2'>{workExperiencesDetailView[company].jobTitle}</Typography>
+            <Typography variant='h2'>{workExperiences[company].jobTitle}</Typography>
             <Typography className={styles.experience_detail_duration__typography}>
-              {workExperiencesDetailView[company].jobDuration}
+              {workExperiences[company].jobDuration}
             </Typography>
             <Box className={styles.experience_detail_technologies__container}>
-              {workExperiencesDetailView[company].technologies.map((item, index) => (
+              {workExperiences[company].technologies.map((item, index) => (
                 <Box
                   key={index}
                   sx={{ border: `2px solid ${item.color}` }}
@@ -71,7 +71,7 @@ const ExperienceDetailPage = () => {
             </Box>
             <Box className={styles.experience_detail_description__container}>
               <Typography className={styles.project_company_description__typography}>
-                {workExperiencesDetailView[company].description.split('\n').map((line, index) => (
+                {workExperiences[company].description.split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}<br />
                   </React.Fragment>
