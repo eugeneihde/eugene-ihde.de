@@ -16,24 +16,26 @@ import { themeProviderConfig } from './config/theme.config';
 const App = () => {
   return (
     <>
-      <ThemeProvider theme={themeProviderConfig}>
-        <CssBaseline />
-        <Box className={styles.root__box}>
-          <Navbar />
-          <Container className={styles.root__container}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/experience" element={<ExperiencePage />} />
-              <Route path="/experience/*" element={<ExperienceDetailPage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/projects/*" element={<ProjectDetailPage />} />
-              <Route path="/imprint" element={<ImprintPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Container>
-        </Box>
-        <Footer />
-      </ThemeProvider>
+      <Box display="flex" flexDirection="column" minHeight="100vh">
+        <ThemeProvider theme={themeProviderConfig}>
+          <CssBaseline />
+          <Box className={styles.root__box}>
+            <Navbar />
+            <Container className={styles.root__container}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/experience" element={<ExperiencePage />} />
+                <Route path="/experience/*" element={<ExperienceDetailPage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/projects/*" element={<ProjectDetailPage />} />
+                <Route path="/imprint" element={<ImprintPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Container>
+          </Box>
+          <Footer />
+        </ThemeProvider>
+      </Box>
     </>
   );
 };
