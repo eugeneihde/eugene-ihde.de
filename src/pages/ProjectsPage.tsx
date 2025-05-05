@@ -13,7 +13,8 @@ export default function ProjectsPage() {
       <Helmet>
         <title>Eugene Ihde - Projects</title>
         <meta name='description' content='My Personal Projects - Personal Finance Tracker ・ IHK Certificate Generator' />
-      </Helmet>
+        <link rel="canonical" href="https://eugene-ihde.de/projects" />
+        </Helmet>
       <Box className={styles.header_center__container}>
         <Typography variant='h1'>Projects</Typography>
       </Box>
