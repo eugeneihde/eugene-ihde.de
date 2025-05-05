@@ -13,7 +13,7 @@ export default function ExperiencePage() {
       <Helmet>
         <title>Eugene Ihde - Experience</title>
         <meta name='description' content='My Work Experience - Computerzentrum Strausberg ・ QTech ・ Publicplan ・ Brandung' />
-        <link rel="canonical" href="https://eugene-ihde.de/experiences" />
+        <link rel="canonical" href="https://eugene-ihde.de/experience" />
       </Helmet>
       <Box className={styles.header_center__container}>
         <Typography variant='h1'>Work Experience</Typography>

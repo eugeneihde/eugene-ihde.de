@@ -16,6 +16,7 @@ export default function HomePage() {
           name="description"
           content="I am Eugene Ihde - I do Information Security, Business Continuity Management and Software Development"
         />
+        <link rel="canonical" href="https://eugene-ihde.de/" />
       </Helmet>
       <Box className="flex-container fd-column">
         <Box className={styles.homepage__container}>
