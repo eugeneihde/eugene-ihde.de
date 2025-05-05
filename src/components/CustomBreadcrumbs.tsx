@@ -1,4 +1,3 @@
-import React from 'react'
 import Breadcrumbs from '@mui/material/Breadcrumbs'
 import { Box, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
@@ -6,7 +5,7 @@ import { Link } from 'react-router-dom'
 import styles from '../assets/css/main.module.css'
 import { BreadcrumbProps } from '../config/content.config'
 
-const CustomBreadcrumbs: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => {
+export default function CustomBreadcrumbs({ breadcrumbs }: BreadcrumbProps) {
   return (
     <>
       <Breadcrumbs
@@ -33,5 +32,3 @@ const CustomBreadcrumbs: React.FC<BreadcrumbProps> = ({ breadcrumbs }) => {
     </>
   )
 }
-
-export default CustomBreadcrumbs

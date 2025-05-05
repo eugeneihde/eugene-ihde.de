@@ -6,12 +6,45 @@ import styles from '../assets/css/main.module.css';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export interface BreadcrumbProps {
   breadcrumbs: LinkProps[];
 }
 
-export type Companies = 'computerzentrumstrausberg' | 'qtech' | 'publicplan' | 'brandung';
+export interface ProjectData {
+  title: string;
+  projectRef: string;
+  description: string;
+  sourceCode: string;
+  releaseDate: string;
+  technologies: {
+    type: string;
+    color: string;
+  }[];
+}
+
+export interface ProjectDataConfig {
+  [key: string]: ProjectData;
+}
+
+export interface ExperienceData {
+  company: string;
+  jobTitle: string;
+  jobDuration: string;
+  companyRef: string;
+  logo: string | null;
+  description: string;
+  technologies: {
+    type: string;
+    color: string;
+  }[];
+  companyLink: string;
+}
+
+export interface ExperienceDataConfig {
+  [key: string]: ExperienceData;
+}
 
 interface LinkProps {
   label: string;
@@ -31,11 +64,15 @@ export const socialLinks = [
     icon: <GitHubIcon className={styles.social__icon} />,
     link: 'https://www.github.com/eugeneihde',
   },
+  {
+    icon: <MailOutlineIcon className={styles.social__icon} />,
+    link: 'mailto:contact@eugene-ihde.de',
+  },
 ];
 
 export const companies: string[] = ['computerzentrumstrausberg', 'qtech', 'publicplan', 'brandung'];
 
-export const workExperiences = {
+export const workExperiences: ExperienceDataConfig = {
   computerzentrumstrausberg: {
     company: 'Computer Zentrum Strausberg GmbH',
     jobTitle: 'ISO, BCM & Software Developer',
@@ -138,7 +175,7 @@ export const workExperiences = {
   },
 };
 
-export const projectData = {
+export const projectData: ProjectDataConfig = {
   personal_finance_tracker: {
     title: 'Personal Finance Tracker',
     projectRef: 'personal_finance_tracker',

@@ -2,12 +2,12 @@ import { Box, Typography } from '@mui/material'
 import EastIcon from '@mui/icons-material/East'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import styles from '../assets/css/main.module.css'
 import { workExperiences } from '../config/content.config'
-import { Helmet } from 'react-helmet'
 
-const ExperiencePage = () => {
+export default function ExperiencePage() {
   return (
     <>
       <Helmet>
@@ -62,5 +62,3 @@ const ExperiencePage = () => {
     </>
   )
 }
-
-export default ExperiencePage

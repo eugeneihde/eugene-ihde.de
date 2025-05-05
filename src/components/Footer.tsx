@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 import styles from '../assets/css/main.module.css'
 
-const Footer = () => {
+export default function Footer() {
   const pathname = useLocation().pathname
 
   return (
@@ -21,5 +21,3 @@ const Footer = () => {
     </>
   )
 }
-
-export default Footer

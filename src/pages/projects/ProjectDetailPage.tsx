@@ -1,58 +1,53 @@
-import { Link } from 'react-router-dom'
+import { Link, redirect } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
-
-import styles from '../../assets/css/main.module.css'
-import { projectData } from '../../config/content.config'
-import CustomBreadcrumbs from '../../components/CustomBreadcrumbs'
 import { Helmet } from 'react-helmet'
 
-const ProjectDetailPage = () => {
-  const [project, setProject] = useState<'ihk_certificate_generator' | 'personal_finance_tracker' | undefined>(undefined)
+import styles from '../../assets/css/main.module.css'
+import { ProjectData, projectData } from '../../config/content.config'
+import CustomBreadcrumbs from '../../components/CustomBreadcrumbs'
+
+export default function ProjectDetailPage() {
+  const [project, setProject] = useState<ProjectData | null>(null)
 
   useEffect(() => {
-    const pathSegments = location.pathname.split('/')
-    const companyParam = pathSegments[2]
+    const pathSegments: string[] = location.pathname.split('/')
+    const companyParam: string = pathSegments[2]
 
-    if (
-      typeof companyParam !== 'undefined' &&
-      (
-        companyParam === 'ihk_certificate_generator' ||
-        companyParam === 'personal_finance_tracker'
-      )
-    ) {
-      setProject(companyParam)
+    if (projectData[companyParam]) {
+      setProject(projectData[companyParam])
     } else {
       window.location.href = '/projects'
+      redirect('/projects')
     }
   }, [])
 
   return (
     <>
-      {project !== undefined &&
+      {project !== null &&
         <>
           <Helmet>
-            <title>Eugene Ihde - {projectData[project].title}</title>
-            <meta name='description' content={`${projectData[project].title}・${projectData[project].description.substring(0, 100)}`} />
+            <title>Eugene Ihde - {project.title}</title>
+            <meta name='description' content={`${project.title}・${project.description.substring(0, 100)}`} />
           </Helmet>
           <CustomBreadcrumbs breadcrumbs={[
               { label: 'Projects', link: '/projects' },
-              { label: projectData[project].title}
+              { label: project.title}
           ]} />
           <Box className={styles.header_center__container}>
             <Typography
               variant='h1'
               className={styles.project_title__typography}
             >
-              {projectData[project].title}
+              {project.title}
             </Typography>
             <Typography className={styles.project_release__typography}>
-              RELEASE: {projectData[project].releaseDate}
+              RELEASE: {project.releaseDate}
             </Typography>
             <Box className={styles.experience_detail_technologies__container}>
-              {projectData[project].technologies.map((item, index) => (
+              {project.technologies.map((item, index) => (
                 <Box
                   key={index}
                   sx={{ border: `2px solid ${item.color}` }}
@@ -67,20 +62,20 @@ const ProjectDetailPage = () => {
               ))}
             </Box>
             <Link
-              to={projectData[project].sourceCode}
+              to={project.sourceCode}
               target='_blank'
             >
               <Button
                 variant='outlined'
                 className={styles.project_sourcecode__button}
+                endIcon={<GitHubIcon className={styles.button__icon} />}
               >
                 Source Code
-                <GitHubIcon className={styles.button__icon} />
               </Button>
             </Link>
             <Box className={styles.project_description__container}>
               <Typography className={styles.project_company_description__typography}>
-                {projectData[project].description.split('\n').map((line, index) => (
+                {project.description.split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}<br />
                   </React.Fragment>
@@ -93,5 +88,3 @@ const ProjectDetailPage = () => {
     </>
   )
 }
-
-export default ProjectDetailPage

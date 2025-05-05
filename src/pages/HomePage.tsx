@@ -7,7 +7,7 @@ import styles from '../assets/css/main.module.css';
 import profilePicture from '../assets/media/profilepicture.jpg';
 import { socialLinks } from '../config/content.config';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <>
       <Helmet>
@@ -86,6 +86,4 @@ const HomePage = () => {
       </Box>
     </>
   );
-};
-
-export default HomePage;
+}

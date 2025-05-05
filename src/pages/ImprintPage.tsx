@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import styles from '../assets/css/main.module.css'
 
-const ImprintPage = () => {
+export default function ImprintPage() {
   return (
     <>
       <Box className={styles.header_center__container}>
@@ -40,5 +40,3 @@ const ImprintPage = () => {
     </>
   )
 }
-
-export default ImprintPage

@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import { Box, Typography } from '@mui/material'
 import EastIcon from '@mui/icons-material/East'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
+import { Helmet } from 'react-helmet'
 
 import styles from '../assets/css/main.module.css'
 import { projectData } from '../config/content.config'
-import { Helmet } from 'react-helmet'
 
-const ProjectsPage = () => {
+export default function ProjectsPage() {
   return (
     <>
       <Helmet>
@@ -62,5 +62,3 @@ const ProjectsPage = () => {
     </>
   )
 }
-
-export default ProjectsPage

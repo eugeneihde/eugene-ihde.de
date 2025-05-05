@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 import styles from '../assets/css/main.module.css'
 
-const Navbar = () => {
+export default function Navbar() {
   const pathname = useLocation().pathname
 
   return (
@@ -36,5 +36,3 @@ const Navbar = () => {
     </>
   )
 }
-
-export default Navbar

@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 import styles from '../assets/css/main.module.css'
 import notFoundSvg from '../assets/media/notfound.svg'
 
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
     <>
       <Box className={styles.notfound__container}>
@@ -20,5 +20,3 @@ const NotFoundPage = () => {
     </>
   )
 }
-
-export default NotFoundPage
